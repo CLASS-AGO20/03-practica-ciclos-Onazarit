@@ -27,6 +27,14 @@ export default class App {
         }while(i>=1)
         return(contador);
     }
+
+    elevar(numero, potencia){
+        let aux=1;
+        for(let i = potencia;i>=1;i--){
+            aux = numero*aux;
+        }
+        return(aux);
+    }
 }
 
 let app = new App();
@@ -41,3 +49,7 @@ console.log("8 asteriscos: "+app.convertirAString(8));
 // Prueba metodo obtenerDivisibles
 console.log("El 6 es divisible entre "+app.obtenerDivisibles(6)+" numeros");
 console.log("El 10 es divisible entre "+app.obtenerDivisibles(10)+" numeros");
+
+// Prueba metodo elevar;
+console.log("Numero 3 elevado a la 4 es: "+app.elevar(3,4));
+console.log("Numero 8 elevado a la 3 es: "+app.elevar(8,3));
